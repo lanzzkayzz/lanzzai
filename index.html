@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kalzz AI</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body class="theme-blue">
+  <!-- Sidebar -->
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-title">
+        <i class="fa-solid fa-bars-staggered"></i> Menu
+      </div>
+      <button id="closeSidebar" class="icon-btn" title="Tutup">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <div class="sidebar-section">
+      <button id="btnNewChat" class="btn primary w-full">
+        <i class="fa-solid fa-plus"></i> Obrolan Baru
+      </button>
+      <button id="btnDeleteAll" class="btn danger-outline w-full mt-8">
+        <i class="fa-solid fa-trash"></i> Hapus Semua
+      </button>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="section-title"><i class="fa-regular fa-comments"></i> Daftar Obrolan</div>
+      <div id="history" class="history-list"></div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="section-title"><i class="fa-regular fa-circle-question"></i> Panduan</div>
+      <div class="guide">
+        <p><b>Kirim pesan:</b> Enter </p>
+        <p>Gunakan tombol <b>+ Obrolan Baru</b> untuk mulai sesi baru.</p>
+        <p>Ketuk nama obrolan untuk <b>ganti obrolan</b>. Ikon <i class="fa-solid fa-pen-to-square"></i> untuk <b>ganti nama</b>, &nbsp;<i class="fa-solid fa-trash"></i> untuk <b>hapus</b>.</p>
+        <p>Ubah tema via ikon <i class="fa-regular fa-moon"></i>/<i class="fa-regular fa-sun"></i> di bagian atas.</p>
+      </div>
+    </div>
+
+    <!-- Contact Developer -->
+    <div class="sidebar-section">
+      <div class="section-title"><i class="fa-solid fa-user-gear"></i> Developer</div>
+      <button id="btnContact" class="btn primary w-full">
+        <i class="fa-solid fa-envelope"></i> Contact Developer
+      </button>
+    </div>
+  </aside>
+
+  <!-- Main -->
+  <main class="main">
+    <!-- Header -->
+    <header class="header">
+      <button id="openSidebar" class="icon-btn" title="Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <div class="brand">
+        <img src="https://files.catbox.moe/41izsc.jpeg" alt="logo"/>
+        <span>Lanzz AI.</span>
+      </div>
+      <div class="header-actions">
+        <button id="btnTheme" class="icon-btn" title="Ubah Tema">
+          <i class="fa-regular fa-moon"></i>
+        </button>
+        <button id="btnReset" class="icon-btn" title="Muat Ulang">
+          <i class="fa-solid fa-rotate-right"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Chat -->
+    <section id="chat" class="chat-shell">
+      <div id="chatCard" class="chat-card">
+        <div class="messages" id="messages">
+          <!-- greeting injected by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Composer -->
+    <section class="composer">
+      <div class="composer-inner">
+        <textarea id="input" rows="1" placeholder="Ketik pesan Anda..."></textarea>
+        <button id="send" class="send-btn" disabled title="Kirim (Enter)">
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </div>
+      <div class="safe-area"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      Lanzz AI. © 2025 Lanzz Not Dev.
+    </footer>
+  </main>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-box">
+      <div class="modal-title" id="modalTitle">Konfirmasi</div>
+      <div class="modal-body" id="modalBody">Yakin?</div>
+      <div id="modalInputWrap" class="modal-input-wrap hidden">
+        <input id="modalInput" class="input" placeholder="Ketik di sini..."/>
+      </div>
+      <div class="modal-actions">
+        <button id="modalCancel" class="btn ghost">Batal</button>
+        <button id="modalOk" class="btn danger">Oke</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
